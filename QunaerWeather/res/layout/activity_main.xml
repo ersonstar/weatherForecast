@@ -1,0 +1,290 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#004f82"
+    android:orientation="vertical" >
+
+    <!-- ********************header****************************** -->
+
+    <RelativeLayout
+        android:id="@+id/ly_header"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/Uiv_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/a01" />
+
+        <TextView
+            android:id="@+id/Utv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_toRightOf="@id/Uiv_icon"
+            android:text="成都"
+            android:textColor="#fff"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/Utv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Utv_city"
+            android:layout_toRightOf="@id/Uiv_icon"
+            android:text="2015/7/9"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <!-- ********************Current temp****************************** -->
+
+    <RelativeLayout
+        android:id="@+id/Ry_current_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="5"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/Utv_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="28"
+            android:textColor="#fff"
+            android:textSize="80sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/Utv_temp"
+            android:background="#00000000"
+            android:src="@drawable/du" />
+    </RelativeLayout>
+
+    <!-- ********************detail****************************** -->
+
+    <LinearLayout
+        android:id="@+id/ly_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="Temp"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/Utv_tempscoreValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23℃~34℃"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weather"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/Utv_weatherValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="多云转晴"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wind"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/Utv_windValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微风 "
+                android:textColor="#fff" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ********************footer****************************** -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/Uly_today"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#6695b3"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="3dp" >
+
+                <TextView
+                    android:id="@+id/Utv_today_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="星期五"
+                    android:textColor="#ffffff" />
+
+                <ImageView
+                    android:id="@+id/Uiv_today_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/a01" />
+
+                <TextView
+                    android:id="@+id/Utv_today_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23℃~34℃"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Uly_tomorrow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#bb6695b3"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="3dp" >
+
+                <TextView
+                    android:id="@+id/Utv_tomorrow_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="星期六"
+                    android:textColor="#ffffff" />
+
+                <ImageView
+                    android:id="@+id/Uiv_tomorrow_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/a01" />
+
+                <TextView
+                    android:id="@+id/Utv_tomorrow_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23℃~34℃"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Uly_DAtomorrow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#886695b3"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="3dp" >
+
+                <TextView
+                    android:id="@+id/Utv_DAtomorrow_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="星期六"
+                    android:textColor="#ffffff" />
+
+                <ImageView
+                    android:id="@+id/Uiv_DAtomorrow_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/a01" />
+
+                <TextView
+                    android:id="@+id/Utv_DAtomorrow_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23℃~34℃"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Uly_DDAtomorrow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#446695b3"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="3dp" >
+
+                <TextView
+                    android:id="@+id/Utv_DDAtomorrow_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="星期六"
+                    android:textColor="#ffffff" />
+
+                <ImageView
+                    android:id="@+id/Uiv_DDAtomorrow_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/a01" />
+
+                <TextView
+                    android:id="@+id/Utv_DDAtomorrow_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23℃~34℃"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
